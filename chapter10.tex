@@ -1,0 +1,65 @@
+\documentclass[main.tex]{subfiles}
+
+\begin{document}
+
+\section*{Häufungspunkte, \( \limsup, \liminf\)}
+
+\begin{karte}{Definition Häufungspunkt}
+    Sei \({(a_n)}_n\) Folge. \(a\in\R \) Häufungspunkt 
+    von \({(a_n)}_n\), falls \(\forall\varepsilon>0\, 
+    a_n\in U_\varepsilon(a) \) für unendlich viele 
+    \(n\in\N \) (d.\ h.\  \( \forall K\in\N \,\exists 
+    n>K:a_n \in U_\varepsilon (a) \)).
+    \[ b\in H({(a_n)}_n) \Leftrightarrow 
+    {(a_n)}_n \text{ hat Teilfolge } 
+    {(a_{n_k})}_k \text{, die gegen } 
+    b \text{ konvergiert}. \]
+\end{karte}
+\begin{karte}{Häufungspunkte von Folgen}
+    \begin{enumerate}
+        \item Ist \({(a_n)}_n\) beschränkt. 
+        So ist \(H({(a_n)}_n) \neq \emptyset \).
+        \item Konvergiert \({(a_n)}_n\) gegen 
+        \(a\), so ist \( H({(a_n)}_n) = \set{a} \).
+	\end{enumerate}
+\end{karte}
+\begin{karte}{Definition \( \limsup, \liminf \)}
+    \[ \limsup {(a_n)}_n = \sup H({(a_n)}_n). \]
+    \[ \liminf {(a_n)}_n = \inf H({(a_n)}_n). \]
+    Es gilt immer \( \liminf\limits_{n\rightarrow\infty}
+    a_n \leq \limsup\limits_{n\rightarrow\infty}a_n \). \\
+    \({(a_n)}_n\) beschränkte Folge:\\
+    dann gilt \({(a_n)}_n\) konvergiert \( \Leftrightarrow 
+    \liminf\limits_{n\rightarrow\infty}
+    a_n = \limsup\limits_{n\rightarrow\infty}a_n 
+    \Leftrightarrow \liminf\limits_{n\rightarrow\infty}a_n 
+    \geq \limsup\limits_{n\rightarrow\infty}a_n \).
+\end{karte}
+\begin{karte}{Eigenschaften \(\liminf, \limsup \)}
+    Sei \({(a_n)}_n\) beschränkte Folge. Dann gilt:\\
+	\(a^* = \limsup\limits_{n\rightarrow\infty}a_n \Leftrightarrow \)
+	\begin{enumerate}
+        \item \(\forall a> a^* \) ist \( \set{n\in\N \;\vert \; a_n>a} \) 
+        endliche Teilmenge von \(\N \).
+        \item \( \forall a<a^* \) gibt es \(\infty \)-viele \(a_n >a\). 
+        (d.\ h.\  \( \set{ n\in\N|a_n>a} \) ist unendliche 
+        Teilmenge von \(\N \)).
+	\end{enumerate}
+	genauso für \( \liminf \):
+	\(a_* = \liminf\limits_{n\rightarrow\infty}a_n \Leftrightarrow \)
+	\begin{enumerate}
+        \item \(\forall a< a_* \) ist \( \set{n\in\N |a_n<a} \) 
+        endliche Teilmenge von \(\N \).
+		\item \( \forall a>a_* \) gibt es \(\infty \)-viele \(a_n<a\).
+    \end{enumerate}
+\end{karte}
+\begin{karte}{Häufungspunkte von beschränkten Folgen}
+    Sei \({(a_n)}_n\) beschränkte Folge.
+    \[ \Rightarrow H({(a_n)}_n) \subset 
+    [ \liminf\limits_{n\rightarrow\infty}a_n, 
+    \limsup\limits_{n\rightarrow\infty}a_n ] 
+    \text{ und } \limsup a_n, \liminf a_n \in 
+    H({(a_n)}_n). \]
+\end{karte}
+
+\end{document}

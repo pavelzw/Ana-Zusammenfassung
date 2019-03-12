@@ -3,9 +3,64 @@
 \begin{document}
 
 \section*{Abbildungen und Funktionen}
-\begin{karte}{Definition Abbildung}
-    
+\begin{karte}{Schubfachprinzip und Folgerungen}
+    Ist \( \abb{f}{[m]}{[n]} \) eine Funktion mit 
+    \( m > n \), so existiert ein \( k \in [n] \) mit 
+    \( f^{-1}(\set{k}) \supseteq \set{m_1, m_2}  \), 
+    wobei \( m_1 \neq m_2 \).\\
+    Sind \( n,m \in \N \) und ist \( \abb{f}{[m]}{[n]} \) injektiv 
+    \( \Rightarrow m \geq n \).
+    Sind \( n,m \in \N \) und ist \( \abb{f}{[m]}{[n]} \) bijektiv 
+    \( \Rightarrow m = n \).
 \end{karte}
-
-
+\begin{karte}{Mächtigkeit von Mengen}
+    Seien \( M, A, B \) Mengen.
+    \begin{itemize}
+        \item \( M \) heißt \textit{endlich} \( \Leftrightarrow 
+        M = \emptyset \) oder \( \exists n \in \N \, \exists 
+        \abb{f}{[n]}{M} \) bijektiv.
+        \item \( M \) heißt \textit{unendlich} 
+        \(\Leftrightarrow M \) ist nicht endlich 
+        \item \( A, B \) heißen gleichmächtig \( \Leftrightarrow 
+        \exists \abb{f}{A}{B} \) bijektiv.
+        \item \(M\) heißt \textit{abzählbar} 
+        \( \Leftrightarrow \exists \abb{f}{\N}{M} \) bijektiv
+        \item \( M \) heißt \textit{überabzählbar} \( \Leftrightarrow 
+        M \) ist unendlich und nicht abzählbar.
+    \end{itemize}
+    \( \Q \) ist abzählbar und \( \R \) ist überabzählbar.
+\end{karte}
+\begin{karte}{Satz von Cantor und Berenstein}
+    Seien \(A, B \) Mengen und \( \abb{f}{A}{B} \) 
+    sowie \( \abb{g}{B}{A} \) injektiv.
+	Dann existiert eine Bijektion \( \abb{h}{A}{B} \).
+\end{karte}
+\begin{karte}{Vereinigung abzählbarer Mengen}
+    \begin{enumerate}
+		\item Jede Teilmenge einer abzählbaren Menge ist abzählbar.
+        \item Für alle \(j \in \N \) sei \(A_j \) 
+        eine abzählbare Menge. Dann ist 
+        \[ \bigcup_{j \in \N}{A_j} \] abzählbar.
+	\end{enumerate}
+\end{karte}
+\begin{karte}{Definition Binomialkoeffizient und Rekursionsformel}
+    Seien \(\alpha \in \R, k \in \N \).
+    \[ \binom{\alpha}{k} \Leftrightarrow 
+    \frac{ \alpha(\alpha-1)\cdots(\alpha-k+1) }{k!},
+    \quad \binom{\alpha}{0} \Leftrightarrow 1 \]
+    heißt Binomialkoeffizient von \(\alpha \) und \(k \). \\
+    Seien \(\alpha \in \R, k \in \N \). Dann gilt
+    \[ \binom{\alpha + 1}{k} = \binom{\alpha}{k} 
+    + \binom{\alpha}{k-1}. \]
+\end{karte}
+\begin{karte}{Binomische Formel}
+    Seien \(a, b \in \R, n \in \N \). Dann gilt
+	\[ {(a+b)}^n = \sum_{k=0}^{n} \binom{n}{k} a^k b^{n-k}. \]
+\end{karte}
+\begin{karte}{Mächtigkeit der Potenzmenge}
+    Sei \(A \) eine endliche Menge. Dann gilt 
+    \( \# \PO(A) = 2^{\#A} \).\\
+    Es existiert keine surjektive Funktion 
+    \(\abb{f}{A}{\PO(A)} \).
+\end{karte}
 \end{document}
