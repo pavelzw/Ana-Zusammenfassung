@@ -1,0 +1,71 @@
+\documentclass[main.tex]{subfiles}
+
+\begin{document}
+\section*{Stetigkeit}
+\begin{karte}{Definition Stetigkeit}
+    Die Funktion \( f: D\rightarrow \R^m \) ist stetig 
+    in \( x_0 \in D \), falls
+    \[ \forall \, \varepsilon > 0 \,\exists \, \delta > 0 
+    \, \colon \, \underbrace{ \abs{ f(x) - f(x_0) 
+    }}_{\text{Abstand in } \R^m} < \varepsilon \quad 
+    \forall x\in D \text{ mit } \underbrace{\abs{x - x_0} 
+    }_{\text{Abstand in } \R^n} < \delta. \]
+    \( f: D\rightarrow \R^m \) heißt stetig, falls \( f \) 
+    stetig in allen \(x_0 \in D \) ist.
+\end{karte}
+\begin{karte}{Dirichletfunktion}
+    Indikatorfunktion:
+    \[ E\subset \R, 
+        \mathds{1}_E : \R\rightarrow\R, x\mapsto 
+        \begin{cases}
+        1, x\in E\\
+        0, x\in\R \setminus E
+    \end{cases} \]
+    Spezialfall \( E = \Q, \mathds{1}_\Q \) heißt Dirichletfunktion.\\
+    \( \mathds{1}_\Q \) ist in jedem Punkt \( x_0 \in \R \) stetig.
+\end{karte}
+\begin{karte}{Folgenkriterium für Stetigkeit}
+    Sei \( D\subset \R^n, f:D\rightarrow \R^m, x_0 \in D \). Dann sind
+    äquivalent
+    \begin{enumerate}
+        \item \( f \) ist stetig in \( x_0 \).
+        \item Für jede Folge \( {(x_k)}_{k\in\N} \) mit \( x_k \in D \)
+        und \( \limes{k} x_k = x_0 \) folgt 
+        \[ \limes{k} f(x_k) = f(x_0) \]
+        (d.\ h.\  \( f(\limes{k} x_k) = \limes{k} f(x_k) \))
+    \end{enumerate}
+\end{karte}
+\begin{karte}{Stetigkeit Verkettung}
+    Seien \( f:D\rightarrow \R^m, f(D) \subset E \in\R^m, 
+    g: E\rightarrow\R^k \). Ist \( f \) stetig in \( x_0 \)
+    und \( g \) stetig in \( y_0 := f(x_0) \), so ist 
+    \( g \circ f : D\rightarrow \R^k, x \mapsto (g\circ f)(x) 
+    = g(f(x)) \) stetig in \( x_0 \).
+\end{karte}
+\begin{karte}{Stetigkeit in \( \R^d \)}
+    Eine Funktion \[ f: D\rightarrow \R^d, x\mapsto 
+    f(x) = (f_1(x), f_2(x), \dots , f_d(x)) \]
+    ist stetig in  \(x_0 \in D\).\\
+    \( \Leftrightarrow \) Alle \gqq{Koordinaten-Funktionen} 
+    \( f_j : D \rightarrow \R, x\mapsto f_j(x) \) 
+    sind stetig in \( x_0 \).
+\end{karte}
+\begin{karte}{Stetigkeitsregeln}
+    Seien \( f,g : D \rightarrow \R^d \) 
+    stetig in \( x_0 \in D \).
+    \begin{enumerate}
+        \item Dann ist \( \lambda f + \mu g \) 
+        stetig in \( x_0 \) für alle 
+        \( \lambda, \mu \in \R \).
+        (Bem.: Dasselbe gilt für \( f,g:D\rightarrow \C, 
+        \lambda, \mu \in \C \) (und auch für \( \R^d \)))
+        Sind \( f,g: D\rightarrow \C \) stetig 
+        in \( x_0 \), so folgt:
+        \item \( f \cdot g \) ist stetig in \( x_0 \).
+        \item Ist \( g(x_0) \neq 0 \), so ist \( \frac{f}{g} : 
+        B_\delta(x_0) \cap D \rightarrow \C \) 
+        für hinreichend kleine \( \delta > 0 \) 
+        definiert und stetig in \( x_0 \).
+    \end{enumerate}
+\end{karte}
+\end{document}

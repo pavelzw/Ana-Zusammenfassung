@@ -4,6 +4,7 @@
 \RequirePackage[utf8]{inputenc} %Umlaute
 \RequirePackage{graphicx} %Grafiken einbinden
 \RequirePackage{amsmath,amssymb,amsthm}
+\RequirePackage{dsfont}
 \newcommand\mapsfrom{\mathrel{\reflectbox{\ensuremath{\mapsto}}}}
 \RequirePackage{subfiles}
 \RequirePackage{arydshln}
@@ -37,6 +38,9 @@
 \newcommand{\set}[1]{\{#1\}}
 \newcommand{\abb}[3]{\ensuremath{#1 : #2 \rightarrow #3}}
 \newcommand{\limes}[1]{\lim\limits_{#1\rightarrow\infty}}
+\newcommand{\limesx}[2]{\lim\limits_{#1\rightarrow #2}}
+\newcommand{\limessup}[1]{\limsup\limits_{#1\rightarrow\infty}}
+\newcommand{\limesinf}[1]{\liminf\limits_{#1\rightarrow\infty}}
 \newcommand{\obda}{o.\ B.\ d.\ A.}
 \DeclareMathOperator{\Abb}{Abb}
 \DeclareMathOperator{\injektiv}{injektiv}

@@ -1,0 +1,69 @@
+\documentclass[main.tex]{subfiles}
+
+\begin{document}
+\section*{Potenzreihen}
+
+\begin{karte}{Definition Potenzreihe}
+    Eine Potenzreihe ist eine Reihe der Form
+    \[ \sum_{n=0}^\infty a_n z^n, a_n \in\C, z \in\C. \]
+    Partialsummen \( S_n(z) = \sum_{j=0}^n a_j z^j \) (Polynome).\\
+    Definiere \( R:= \sup \set{ \abs{z} \;\vert \; z\in\C, 
+    \sum_{n=0}^\infty a_n z^n \text{ konvergent} } \)
+    (Konvergenzradius). (\( R = 0, \infty \) sind erlaubt.)\\
+    Die Potenzreihe konvergiert absolut für jedes \( z\in\C \) 
+    mit \( \abs{z} < R \) (d.\ h.\  \( z\in B_R(0) \)) 
+    und divergiert für jedes \( \abs{z} > R \).
+\end{karte}
+\begin{karte}{Sinus, Cosinusm, eulersche Formel}
+    \[ \cos z := \sum_{n=0}^\infty {(-1)}^n \frac{z^{2n}}{2n!} 
+    \qquad \sin z  := \sum_{n=0}^\infty {(-1)}^n 
+    \frac{z^{2n+1}}{(2n+1)!}. \]
+    Es gilt:
+    \[ e^{iz} = \cos z + i \sin z \quad \forall z\in\C. \]
+    Es gilt:
+    \[ \cos^2 t + \sin^2 t = 1 \quad \forall t \in \R. \]
+\end{karte}
+\begin{karte}{Konvergenzradius Wurzelkriterium}
+    Für den Konvergenzradius \( R \) von 
+    \( \sum_{n=0}^\infty a_n z^n \) gilt
+    \[ R = \frac{1}{\limessup{n} \sqrt[n]{\abs{a_n}}}, \]
+    wobei \(\frac{1}{0} := \infty \) und 
+    \( \frac{1}{\infty} := 0 \) gesetzt wird.
+\end{karte}
+\begin{karte}{Konvergenzradius Quotientenkriterium}
+    Für den Konvergenzradius \( R \) von 
+    \( \sum_{n=0}^\infty a_n z^n \) gilt
+    \[ R = \limes{n} \frac{\abs{ a_n }}{\abs{ a_{n+1} }}, \]
+    wobei \(\frac{1}{0} := \infty \) und 
+    \( \frac{1}{\infty} := 0 \) gesetzt wird.
+\end{karte}
+\begin{karte}{Indexverschiebung der Potenzreihe}
+    Die Potenzreihen \( \sum_{n=0}^\infty a_n z^n \) 
+    und \( \sum_{n=1}^\infty n \cdot a_n z^{n-1} \) 
+    haben denselben Konvergenzradius.
+\end{karte}
+\begin{karte}{Konvergenzradiuslemma}%besserer Name?
+    Konvergiert \( \sum_{n=0}^\infty a_n z^n \) 
+    für ein \( z = z_1 \neq 0 \), so ist sie auf 
+    der Kreisscheibe \( \overline{B_r (0)}  
+    = \set{ z\in\C \;\vert \; \abs{z}\leq r } \)
+    beschränkt für jedes \( 0 < r < \abs{z_1} \).\\
+    D.\ h.\  \( \exists \, M(r) \geq 0 \), sodass
+    \[ \abs{ \sum_{n=0}^\infty a_n z^n } \leq M(r) 
+    \quad \forall \, \abs{z} < r. \]
+\end{karte}
+\begin{karte}{Konvergenzradiuskorollar}%besserer Name?
+    Ang.\  \( \sum_{n=0}^\infty a_n z^n \) konvergiert 
+    für ein \( z = z_1 \neq 0 \). Dann gibt es zu jedem
+    \[ 0 < r < \abs{z_1} \text{ und } k\in\N_0\]
+    ein \( M(r,k) > 0 \) mit
+    \[ \abs{ \sum_{n=1}^\infty a_n z^n } 
+    \leq M(r,k) \abs{z}^{k+1} \quad \forall \, \abs{z}\leq r. \]
+\end{karte}
+\begin{karte}{Nullreihensatz}
+    Es gebe eine Folge \( {(z_k)}_j, z_j \in\C, z_j 
+    \neq 0 \) mit \( z_j \rightarrow 0 \), sodass 
+    \( \sum_{n=0}^\infty a_n z_j^n = 0 \quad \,\forall \, j\in\N \).
+    \[ \Rightarrow a_n = 0 \quad \forall n\in\N_0. \]
+\end{karte}
+\end{document}
