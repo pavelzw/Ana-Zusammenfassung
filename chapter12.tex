@@ -1,0 +1,139 @@
+\documentclass[main.tex]{subfiles}
+
+\begin{document}
+\section*{Der euklidische Raum \(\R^d\)}
+\begin{karte}{Euklidische Länge und Skalarprodukt}
+    \[ x,y \in\R^d, x\cdot y 
+    = \langle x,y\rangle 
+    := \sum_{j=1}^{d}x_j y_j \]
+    \[ |x| = ||x||_2 
+    := {\left(\sum_{j=1}^{d} x_j^2 \right)}^{1/2} 
+    = \langle x,x\rangle^{1/2} 
+    = \sqrt{\langle x,x\rangle}. \]
+\end{karte}
+\begin{karte}{Cauchy-Schwarz-Ungleichung}
+    \[ \forall x,y\in\R^d: 
+    \abs{\langle x,y\rangle}
+    \leq \abs{x}\abs{y}\]
+    und \gqq{\(=\)} gilt, 
+    \( \Leftrightarrow x,y \) 
+    sind linear abhängig.
+\end{karte}
+\begin{karte}{Definition Norm}
+    Eine Funktion \( ||\cdot || : 
+    \R^d \rightarrow \R \) heißt Norm 
+    (auf \( \R^d \)), falls 
+    \( \forall x,y\in\R^d, \lambda\in\R: \)
+	\begin{enumerate}
+        \item \( ||x||\geq 0, 
+        ||x|| = 0 \Rightarrow x = 0 \)
+        \item \( ||\lambda x|| 
+        = |\lambda|\cdot||x|| \)
+        \item \( ||x+y|| 
+        \leq ||x|| + ||y|| \) (Dreiecksungl.)
+	\end{enumerate}
+\end{karte}
+\begin{karte}{Norm durch induziertes Skalarprodukt}
+    \[ |x| := \sqrt{\langle x,x\rangle} 
+    = {\left(\sum_{j=1}^{d} x_j^2\right)}^{1/2} 
+    \text{ ist eine Norm}. \]
+    Auch:
+	\begin{align*}
+        &\abs{x - y} \geq 0 \text{ und } 
+        \abs{x - y} = 0 \Leftrightarrow x = y\\
+		&\abs{x - y} = \abs{y - x}\\
+        &\abs{x - y} = \abs{x-z + z-y} 
+        \leq \abs{x - z} + \abs{y - z} 
+        \quad \forall z \in \R^d\\
+		&\abs{\abs{x} + \abs{y}} \leq \abs{x - y}
+	\end{align*}
+\end{karte}
+\begin{karte}{Komplexe Konjugation}
+    Für eine komplexe Zahl 
+    \( z=x+iy, \; x,y\in\R \) definiert 
+    man die konjugierte komplexe Zahl durch
+    \[ \bar{z} := x - iy \]
+    Es gelten die Beziehung für \( z\in\C \)
+	\begin{enumerate}
+		\item \(\Re(z) = \frac{1}{2} (z+\bar{z}). \)
+		\item \(\Im(z) = \frac{1}{2i} (z-\bar{z}). \)
+		\item \( \bar{\bar{z}} = z \)
+		\item \( \overline{z+w} = \bar{z} + \bar{w} \)
+		\item \( \overline{z\cdot w} = \bar{z} \cdot \bar{w} \)
+    \end{enumerate}
+\end{karte}
+\begin{karte}{Betrag einer komplexen Zahl}
+    Der Betrag einer komplexen Zahl ist
+    \[ |z| = \sqrt{z \bar{z}}\in \set{x\in\R \;\vert \; x\geq 0}. \]
+    \begin{enumerate}
+        \item Es ist \( \abs{z} \geq 0 
+        \quad \forall z\in\C \) und 
+        \( \abs{z} = 0 \Leftrightarrow z = 0 \)
+        \item (Multiplikativität) 
+        \( \abs{z_1 \cdot z_2} 
+        = \abs{z_1} \cdot \abs{z_2} 
+        \quad \forall z_1,z_2\in\C \)
+        \item (Dreiecksungleichung) 
+        \( \abs{z_1 + z_2} \leq \abs{z_1} + \abs{z_2} \)
+	\end{enumerate}
+\end{karte}
+\begin{karte}{Definition \( \delta \)-Ball}
+    \( B_\delta(x) := \set{ y\in\R^d : \abs{x-y} < \delta } \) 
+    (offene Kugel im \(\R^d\) um \( x\in\R^d \))
+\end{karte}
+\begin{karte}{Definition Mengen, Folgen in \( \R^d \)}
+    Eine Folge in \( \R^d \) ist eine Funktion 
+    \( f: \N \rightarrow \R^d \). 
+    Setzen \(x_n := f(n)\in\R^d \), 
+    schreiben \( {(x_n)}_n \) bzw. 
+    \({(x_n)}_{n\in\N}\).\\
+    Eine Menge \( A\subset \R^d \) 
+    ist beschränkt, falls es ein 
+    \( \delta > 0\) so, dass \( A\subset B_\delta(0) 
+    \Leftrightarrow \exists 0<\delta<\infty:
+    \forall x\in A: \abs{x}\leq \delta \).\\
+    Eine Folge \( {(x_n)}_n, x_n\in\R^d \) 
+    ist beschränkt, falls \(A := \set{x_n \;\vert \; n\in\N} \) 
+    eine beschränkte Menge in \( \R^d \) ist 
+    (\( \Leftrightarrow \exists 0\leq \delta < \infty: 
+    \abs{x_n} \leq \delta \quad \forall n\in\N \)).\\
+\end{karte}
+\begin{karte}{Definition Konvergenz in \( \R^d \)}
+    Eine Folge \( {(x_n)}_n, x_n\in\R^d \) 
+    konvergiert gegen \( x\in\R^d \) für 
+    \( n\rightarrow \infty (x=\limes{n} x_n) \), falls 
+    \[ \limsup\limits_{n\rightarrow\infty} |x-x_n| 
+    = 0 \quad \Leftrightarrow \forall \varepsilon 
+    > 0 \exists K\in\N: |x-x_n| < \varepsilon 
+    \quad \forall n\geq K. \]
+	Eine Folge \( {(x_n)}_n, x_n\in\R^d \) heißt Cauchyfolge, falls 
+    \[ \forall \varepsilon>0 \exists K\in\N: 
+    |x_n - x_m| < \varepsilon \quad \forall n,m\geq K \]
+    \[ \Leftrightarrow \forall \varepsilon > 0 \exists K\in\N: 
+    |x_n-x_m| < \varepsilon \quad \forall m>n\geq K. \]
+\end{karte}
+\begin{karte}{Maximumsnorm}
+    Die Maximumsnorm ist gegeben für \(x\in\R^d\),
+	\[ ||x||_\infty := \underset{1\leq j\leq d}{\max} \abs{x_j} \]
+    Zwischen der \( ||\cdot||_\infty \) und \( |\cdot| \) 
+    besteht die folgende Beziehung:
+    \[ ||x||_\infty \leq |x| 
+    \leq \sqrt{d} \cdot ||x||_\infty, x\in\R^d. \]
+\end{karte}
+\begin{karte}{Konvergenz gegen einzelne Koordinaten}
+    Kovergenz im \(\R^d \Leftrightarrow \) 
+    Konvergenz zugehöriger Koordinatenfolgen.\\
+    Sei \({(x_n)}_n\) eine Folge in \(\R^d\) mit 
+    \(x_n = x_{n1},x_{n2},\dots,x_{nd}\).\\
+    Die Folge \({(x_n)}_n\) konvergiert genau 
+    dann gegen den Punkt \(a = (a_1,\dots,a_d)\in\R^d\), 
+    wenn für \(\nu = 1,\dots,d\) gilt:
+	\[ \limes{n} x_{n_\nu} = a_\nu. \]
+\end{karte}
+\begin{karte}{Cauchyfolgen im \(\R^d\)}
+    Eine Cauchyfolge in \(\R^d\) konvergiert genau dann, 
+    wenn sie eine konvergente Teilfolge hat.\\
+    Im \(\R^d\) konvergiert jede Cauchyfolge.
+\end{karte}
+
+\end{document}

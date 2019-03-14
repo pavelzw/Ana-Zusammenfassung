@@ -1,0 +1,58 @@
+\documentclass[main.tex]{subfiles}
+
+\begin{document}
+\section*{Reihen}
+\begin{karte}{Cauchykriterium für Reihen}
+    Eine Reihe \( \sum_{n=1}^\infty a_n \) 
+    in \( \R^d \) oder \( \C \) konvergiert
+    \[ \Leftrightarrow \, \forall \, 
+    \varepsilon > 0 \,\exists \, K\in\N: 
+    \abs{\sum_{j=n+1}^m a_j } < \varepsilon 
+    \,\forall \, m>n\geq K. \]
+    \[ \Leftrightarrow \, \forall \, 
+    \varepsilon > 0 \,\exists \, K\in\N: 
+    \abs{\sum_{j=n+1}^{n+p} a_j } < \varepsilon 
+    \,\forall \, n\geq K, p\in\N. \]
+\end{karte}
+\begin{karte}{Umordnung}
+    Seien \( \sum_{n=1}^\infty a_n, 
+    \sum_{b=1}^\infty b_n \) Reihen 
+    in \( \R^d \). \( \sum_{n=1}^\infty b_n \) 
+    ist eine Umordnung von 
+    \( \sum_{n=1}^\infty a_n \), falls eine 
+    bijektive Abbildung \( \sigma:\N\rightarrow\N \) 
+    existiert mit
+    \[ b_n = a_{\sigma(n)} \,\forall \, n\in\N. \]
+    Sei \( \sum_n a_n \) eine absolut konvergente Reihe. 
+    Dann konvergiert jede Umordnung gegen denselben Wert.
+\end{karte}
+\begin{karte}{Unbedingte Konvergenz und Dirichlet}
+    Eine Reihe \( \sum_n a_n \) heißt unbedingt konvergent, 
+    falls jede Umordnung \( \sum_n b_n \) ebenfalls 
+    konvergiert und denselben Grenzwert besitzt. 
+    Andernfalls heißt \( \sum_n a_n \) bedingt konvergent.
+    \[ \sum_n a_n, a_n \in\R^d \text{ ist unbedingt konvergent } 
+    \Leftrightarrow \sum_n a_n \text{ ist absolut konvergent.} \]
+\end{karte}
+\begin{karte}{Satz von Riemann}
+    Sei \( \sum_n a_n, a_n \in\R \) eine bedingt konvergente 
+    Reihe. Dann existiert zu jeder Zahl \( c\in\R \) eine 
+    Umordnung \( \sum_n b_n \) von \( \sum_n a_n \) mit 
+    \( \sum_{n=1}^\infty b_n = c \).
+\end{karte}
+\begin{karte}{Cauchyprodukt}
+    \( a_n, b_n \in\C \). Die Reihen 
+    \( \sum_{n=0}^\infty a_n, \sum_{n=0}^\infty b_n \) 
+    seien absolut konvergent.\\
+    Dann ist auch \( \sum_{n=0}^\infty c_n \) mit 
+    \[ c_n := \sum_{k+l=n} a_k b_l = \sum_{k=0}^n a_k b_{n-k} \]
+    absolut konvergent und \( \sum_n c_n 
+    = ( \sum_{k=0} a_k )( \sum_{l=0} b_l ) \) \\
+    und ist \(\tau \colon \; \N_0 \rightarrow \N_0 \times \N_0, 
+    n \mapsto \tau(n) = (\tau_1(n), \tau_2(n)) \) bijektiv
+    \( p_n := a_{\tau_1(n)} \cdot b_{\tau_2(n)} \rightarrow 
+    \sum_{n=0}^\infty p_n \) absolut konvergent \\
+    und \( \sum_{n=0}^\infty p_n = \sum_{k=0}^\infty 
+    a_k \cdot \sum_{l=0}^\infty b_l \).
+\end{karte}
+\end{document}
