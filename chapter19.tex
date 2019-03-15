@@ -1,0 +1,96 @@
+\documentclass[main.tex]{subfiles}
+
+\begin{document}
+\section*{Satz von Rolle, MWS, Extrema}
+\begin{karte}{Definition Lokale Extrema}
+    Die Funktion \( f : [a,b] \rightarrow \R \) (oder \( (a,b) \))
+    hat in \( x_0 \in [a,b] \) ein lokales Minimum (oder in 
+    \( x_0 \in (a,b) \)), falls \( \exists \, \delta > 0 \), 
+    sodass 
+    \[ f(x_0) \leq f(x) \, \forall \, x \in U_\delta(x_0)
+    \cap [a,b] = (x_0 - \delta, x_0 + \delta) \cap [a,b] \]
+    Ist \( x_0 \in (a,b) \), so kann \( \delta > 0 \) so klein 
+    gewählt werden, dass \( (x_0 - \delta, x_0 + \delta) 
+    \cap [a,b] = (x_0 - \delta, x_0 + \delta) \). \\
+    Ist sogar \( f(x_0) < f(x) \,\forall \, x \in 
+    (x_0 - \delta, x_0 + \delta) \cap [a,b] \), so heißt 
+    das lokale Minimum isoliert (oder strikt).\\
+    Analog: \( f \) hat in \( x_0 \) ein (indirektes) lokales 
+    Maximum, falls \(-f\) in \(x_0\) ein (isoliertes) lokales 
+    Minimum hat.\\
+    Lokale Extrema \(=\) lokale Minima oder Maxima.
+\end{karte}
+\begin{karte}{notwendige Bedingung für Extrema}
+    \( f: (a,b) \rightarrow \R \) habe in \(x_0 \in (a,b) \) 
+    ein lokales Extremum. Ist \(f\) in \(x_0\) differenzierbar, 
+    so gilt \( f'(x_0) = 0 \)
+\end{karte}
+\begin{karte}{Satz von Rolle}
+    Sei \( f: [a,b] \rightarrow \R \) stetig und differenzierbar 
+    in \( (a,b) \) mit \( f(a) = f(b) = 0 \).
+    \[ \Rightarrow \exists \, \xi \in (a,b) : f'(\xi) = 0. \]
+\end{karte}
+\begin{karte}{Mittelwertsatz}
+    \( f: [a, b] \rightarrow \R \) stetig und differenzierbar 
+    auf \((a,b)\).
+    \[ \Rightarrow \exists \, \xi \in (a,b): f'(\xi) = \frac{f(b)-f(a)}{b-a} \]
+\end{karte}
+\begin{karte}{Monotoniekriterium}
+    Sei \( f : [a,b] \rightarrow \R \) stetig und differenzierbar 
+    auf \( (a,b) \).\\
+    Dann gilt:
+    \begin{align*}
+        f'(x) = 0 \,\forall \, x \in (a,b) \Leftrightarrow 
+        f \text{ ist konstant auf } [a,b].\\
+        f'(x) \geq 0 \,\forall \, x \in (a,b) \Leftrightarrow 
+        f \text{ ist wachsend auf } [a,b].\\ 
+        f'(x) \leq 0 \,\forall \, x \in (a,b) \Leftrightarrow 
+        f \text{ ist fallend auf } [a,b].\\
+    \end{align*}
+    Strikte Ungleichungen implizieren strenge Monotonie auf 
+    \( [a,b] \).
+\end{karte}
+\begin{karte}{Schrankensatz}
+    Sei \( f: [a,b] \rightarrow \R \) stetig und differenzierbar 
+    auf \( (a,b) \).\\
+    Dann gilt für \( a \leq x_1 < x_2 \leq b \): 
+    \begin{enumerate}
+        \item \( f'(x) \geq m \,\forall \, x \in (a,b) 
+        \Rightarrow f(x_2) - f(x_1) \geq m(x_2 - x_1) \).
+        \item \( f'(x) \leq M \, \forall \, x\in (a,b) 
+        \Rightarrow f(x_2) - f(x_1) \leq M(x_2 - x_1) \).
+    \end{enumerate}
+\end{karte}
+\begin{karte}{Definition Lipschitzstetigkeit}
+    Sei \( f: [a,b] \rightarrow \R^d \) stetig und 
+    differenzierbar auf \( (a,b) \). \\
+    Gilt \( ||f'(x)|| \leq L \, \forall \, x \in (a,b) \), 
+    so folgt 
+    \[ ||f(x) - f(y)|| \leq L ||x-y|| 
+    \; \forall \, x,y \in [a,b] \]
+\end{karte}
+\begin{karte}{Definition \(k\)-te Ableitung}
+    Die \( k \)-te Ableitung von 
+    \( f: (a,b) \rightarrow \R \) in \( x_0 \) ist 
+    induktiv definiert durch 
+    \[ f^{(k)}(x_0) = (f^{(k-1)})'(x_0). \]
+    Damit \( f^{(k)}(x_0) \) definiert ist, müssen 
+    also die Ableitungen bis \( (k-1) \)-ter Ordnung 
+    in einer Umgebung von \( x_0 \) definiert sein und 
+    \( f^{(k-1)} \) muss in \( x_0 \) differenzierbar sein.
+\end{karte}
+\begin{karte}{Lokale Extrema erkennen}
+    Sei \( f: (a,b) \rightarrow \R \) differenzierbar. \\
+    Ist \( x_0 \in (a,b) \) und gelte 
+    \[ f'(x_0) = 0 \text{ und } f''(x_0) \text{ existiert.} \]
+    Dann gilt:
+    \begin{enumerate}
+        \item Ist \( f''(x_0) > 0 \), so hat \( f \) in 
+        \( x_0 \) ein isoliertes lokales Minimum.
+        \item Hat \( f \) in \( x_0 \) ein lokales 
+        Minimum, so folgt \( f''(x_0) \geq 0 \).
+    \end{enumerate}
+    Analoge Aussagen mit umgekehrten Ungleichungen gelten 
+    für Maxima.
+\end{karte}
+\end{document}

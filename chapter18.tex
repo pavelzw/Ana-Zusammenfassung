@@ -1,0 +1,104 @@
+\documentclass[main.tex]{subfiles}
+
+\begin{document}
+\section*{Ableitung}
+\begin{karte}{Definition Ableitung}
+    \( \abb{f}{I}{\R} \) (oder \( \C, \R^d \)) 
+    hat in \( x_0 \in I \) die Ableitung \( a\in \R \) 
+    (oder \( \C, \R^d \)), falls 
+    \[ \limesx{x}{x_0} \underbrace{\frac{f(x) - f(x_0)}{x - x_0}}_{
+        \text{Differenzenquotient}
+    } = a. \; (*) \]
+    Notation: \( f'(x_0) := a \).\\
+    Nennen \(f\) differenzierbar (diffbar) in \(x_0\), falls 
+    es so ein \(a\) mit \((*)\) gibt, falls also der Grenzwert 
+    in \((*)\) existiert.\\
+    Alternativ, \( x = x_0 + h \Rightarrow x - x_0 = h \)
+    \[ \limesx{h}{0} \frac{f(x_0 + h) - f(x_0)}{h} = a =: f'(x_0) \]    
+\end{karte}
+\begin{karte}{Definition Ableitung im \(\R^d\)}
+    Konvergenz bezüglich Euklidischer Norm in \( \R^d 
+    \Leftrightarrow \) Konvergenz der Koordinaten.
+    Die Funktion \( f : I \rightarrow \R^d \) ist in \(x_0\) 
+    differenzierbar \( \Leftrightarrow f = (f_1,f_2,\ldots,f_d) \), 
+    alle \( f_j : I \rightarrow \R \) sind in \( x_0 \) 
+    differenzierbar.
+\end{karte}
+\begin{karte}{Definiton Ableitungsfunktion}
+    \( f : I \rightarrow \R^d \) (\( \C, \R^d \)) heißt 
+    differenzierbar (diffbar) auf \(I\) (einfach differenzierbar), 
+    falls \(f\) in jedem Punkt \( x_0 \in I \) differenzierbar ist. \\
+    Die hierdurch gegebene Funktion 
+    \[ f': I \rightarrow \R^d, x_0 \mapsto f'(x_0) 
+    = \limesx{x}{x_0} \frac{f(x) - f(x_0)}{x - x_0} \]
+    heißt Ableitungsfunktion oder kurz Ableitung.
+\end{karte}
+\begin{karte}{Zusammenhang Differenzierbarkeit und Stetigkeit}
+    \( I \) offenes Intervall \( f : I \rightarrow \R^d \) 
+    differenzierbar in \( x_0 \in I \Rightarrow f \) ist stetig 
+    in \(x_0\).
+\end{karte}
+\begin{karte}{Differentiationsregeln (einfach)}
+    Seien \( f, g: I \rightarrow \R^d \) differenzierbar in \(x_0\)
+    \[ \Rightarrow \alpha f + \beta g, \alpha, \beta \in \R 
+    \text{ ist in } x_0 \text{ differenzierbar.} \]
+    \[ (\alpha f + \beta g)'(x_0) = \alpha f'(x_0) 
+        + \beta g'(x_0) \]\\
+    Sind \( f, g: I \rightarrow \R \) (oder \( \C \)) in \(x_0\)
+    differenzierbar, so sind auch \( f\cdot g \) und im Fall 
+    \( g(x_0) \neq 0 \) \( \frac{f}{g} \) differenzierbar.
+\end{karte}
+\begin{karte}{Produktregel}
+    Sind \( f, g: I \rightarrow \R \) (oder \( \C \)) in \(x_0\)
+    differenzierbar
+    \[ (f \cdot g)'(x_0) = f'(x_0) \cdot g(x_0) 
+    + f(x_0) \cdot g'(x_0) \]
+\end{karte}
+\begin{karte}{Quotientenregel}
+    Sind \( f, g: I \rightarrow \R \) (oder \( \C \)) in \(x_0\)
+    differenzierbar
+    \[ \left( \frac{f}{g} \right)'(x_0) 
+    = \frac{ f'(x_0) g(x_0) - f(x_0) g'(x_0) }{ {g(x_0)}^2 }. \]
+    \[ \left(\frac{Z}{N}\right)' = \frac{NAZ - ZAN}{N^2} \]
+    \( NAZ = \) Nenner mal Ableitung Zähler\\
+    \( ZAN = \) Zähler mal Ableitung Nenner.
+\end{karte}
+\begin{karte}{Kettenregel}
+    Seien \( f: I \rightarrow \R, g : J \rightarrow \R, f(I) \subset J \). 
+    Ist \( f \) in \( x_0 \in I \) differenzierbar und \(g\) in 
+    \( y_0 := f(x_0) \) differenzierbar, so ist auch 
+    \( g \circ f : I \rightarrow \R, (g \circ f)(x) = g(f(x)) \) in \(x_0\) 
+    differenzierbar und 
+    \[ (g \circ f)'(x_0) = g'(f(x_0)) \cdot f'(x_0) \]
+\end{karte}
+\begin{karte}{Differenzierbarkeit der Umkehrfunktion}
+    Sei \( f: I \rightarrow \R \) streng wachsend und stetig auf 
+    dem Intervall \(I\) mit Endpunkten \( a < b \). Dann gilt 
+    \begin{enumerate}
+        \item \( J = f(I) \) ist ein Intervall mit Endpunkten 
+        \[ \alpha := \limesx{x}{a +} f(x) 
+        < \beta := \limesx{x}{b -} f(x) \]
+        \item Die Umkehrfunktion \( g: J = f(I) \rightarrow I \) ist 
+        ebenfalls stetig und streng wachsend.
+        \item \( \limesx{y}{\alpha +} g(y) = a, 
+        \limesx{y}{\beta -} g(y) = b \)
+    \end{enumerate}
+    Zudem ist \( I \) ein offenes Intervall, so ist auch \( J = f(I) \) 
+    ein offenes Intervall und ist \(f\) in \(x_0\) differenzierbar mit 
+    \( f'(x) \neq 0 \), so ist \(g\) differenzierbar in \( y_0 = f(x_0) \) 
+    mit 
+    \[ g'(y_0) = \frac{1}{f'(g(y_0))} = \frac{1}{f'(x_0)}. \]
+\end{karte}
+\begin{karte}{Einseitige Grenzwerte monotoner Funktionen}
+    Sei \( h: I \rightarrow \R \) monoton wachsend, \(I\) ein Intervall mit 
+    Endpunkten \( a < b \).\\
+    Dann hat \(h\) einseitige Grenzwerte. Genauer
+    \[ \limesx{x}{x_0 -} h(x) = \lim\limits_{x \nearrow x_0} h(x) 
+    = \sup \underset{\text{falls } x_0 > a}{\set{ h(x) 
+    \; \vert \; x \in I, x < x_0 }} \]
+    \[ \limesx{x}{x_0 +} h(x) = \lim\limits_{x \searrow x_0} h(x) 
+    = \inf \underset{\text{falls } x_0 < b}{\set{ h(x) 
+    \; \vert \; x \in I, x > x_0 }} \]
+    Analoge Aussage gilt, falls \(h\) monoton fallend ist.
+\end{karte}
+\end{document}

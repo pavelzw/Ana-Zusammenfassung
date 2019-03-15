@@ -1,0 +1,82 @@
+\documentclass[main.tex]{subfiles}
+
+\begin{document}
+\section*{Funktionenfolgen}
+\begin{karte}{Definition punktweise Konvergenz}
+    \( f_n : D \rightarrow \C \) konvergiert punktweise 
+    gegen \( f: D \rightarrow \C \), falls 
+    \[ \limes{n} f_n(x) = f(x) \; \forall \, x \in D. \]
+\end{karte}
+\begin{karte}{Definition beschränkte Funktion}
+    \( f: D \rightarrow \C \) heißt beschränkt, falls 
+    \[ \underset{x\in D}{\sup} \abs{f(x)} < \infty \]
+\end{karte}
+\begin{karte}{Supremumsnorm}
+    Für \( f\in B(D,\R) \) (oder \( B(D,\C) \)) setzen wir 
+    \[ ||f||_\infty := \underset{x\in D}{\sup} \abs{f(x)}\]
+    hat alle Eigenschaften einer Norm.
+    \begin{enumerate}
+        \item \( ||f||_\infty \geq 0 \) und 
+        \( ||f||_\infty = 0 \Leftrightarrow f = 0 \) 
+        (Nullfunktion)
+        \item \( ||\lambda f||_\infty = |\lambda| \cdot 
+        ||f||_\infty \) (homogen), \( \lambda \in \R \)
+        \item \( ||f+g||_\infty \leq ||f||_\infty 
+        + ||g||_\infty \) (Dreiecksungleichung) \\
+        für \( f, g \in B(D, \R) \) (bzw. \( B(D,\C) \))
+    \end{enumerate}
+\end{karte}
+\begin{karte}{Definition gleichmäßige Konvergenz}
+    Eine Folge \( \abb{f_n}{D}{\R} \) (oder \( \C \)) 
+    konvergiert gleichmäßig gegen \( f: D \rightarrow \R \), 
+    falls 
+    \[ \limes{n} ||f_n - f ||_\infty = 0. \]
+\end{karte}
+\begin{karte}{lokal gleichmäßige Konvergenz von Potenzreihen}
+    Ist \(0 < R < \infty \) der Konvergenzradius der Potenzreihe 
+    \(P(z) = \sum_{n=0}^{\infty} a_n z^n \), so konvergiert
+    \(P(k) = \sum_{l=0}^{k} a_l z^l \) gleichmäßig auf
+    \([-R + \delta, R - \delta] \) gegen \( P \) für alle 
+    \( 0 < \delta < R \)
+    \[ \underset{\abs{z} \leq R-\delta}{\sup} \abs{P(z)-P_k(z)}
+    \overset{k \rightarrow \infty}{\longrightarrow} 0 \]
+    Ist \( R = \infty \), so konvergiert \( P_k \) auf 
+    \( [-L,L] \) gleichmäßig gegen \( P \) für jedes feste
+    \( L > 0 \) (lokal gleichmäßige Konvergenz)
+\end{karte}
+\begin{karte}{Gleichmäßige Konvergenz und Stetigkeit}
+    Seien \( f_n : D \rightarrow \C, n\in\N \) eine 
+    stetige Funktionenfolge auf \( D \subset \R \) 
+    (oder \( D = \C \)), die gleichmäßig gegen 
+    \( f: D \rightarrow \C \) konvergiert, d.\ h.\ 
+    \[ ||f_n - f||_\infty \rightarrow 0 
+    \text{ für } n\rightarrow\infty. \]
+    Dann ist \(f\) auch stetig auf \(D\).
+\end{karte}
+\begin{karte}{Stetigkeit von Potenzreihen}
+    Sei \( P(z) = \sum_{n=0}^\infty a_n z^n \) eine komplexe 
+    Potenzreihe mit \( R > 0 \). Dann ist \( P \) stetig auf 
+    der Kreisscheibe 
+    \( B_R(0) = \set{ z\in\C \; \vert \; \abs{z} < R } \).
+\end{karte}
+\begin{karte}{Vertauschen von Konvergenz und Ableitung}
+    Seien \( f_n : I \rightarrow \R \) (oder \( \C \)) stetig 
+    und differenzierbar auf \( I = (a,b) \subset \R \).
+    Es gelte 
+    \begin{enumerate}
+        \item \( \set{f_n(x_0)}_{n\in\N} \) konvergiert für 
+        \( x_0 \in I \).
+        \item Die Folge der Ableitungen 
+        \( \set{ f_n' }_{n \in \N} \) 
+        konvergiert gleichmäßig gegen eine Funktion 
+        \( g: I \rightarrow \R \) (oder \( \C \)), also 
+        \( ||f_n' - g||_\infty 
+        \overset{n\rightarrow\infty}{\longrightarrow} 0 \).
+        Dann konvergiert \( \set{f_n}_n \) gleichmäßig gegen 
+        \( f: I \rightarrow \R \) (oder \( \C \)). \\
+        \( f \) ist differenzierbar und \( f' = g \).
+    \end{enumerate}
+    Konvergenz ist lokal gleichmäßig falls 
+    \[ a = -\infty \text{ oder } b = \infty. \]
+\end{karte}
+\end{document}
