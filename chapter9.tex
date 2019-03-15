@@ -1,0 +1,30 @@
+\documentclass[main.tex]{subfiles}
+
+\begin{document}
+
+\section*{Cauchyfolgen}
+
+\begin{karte}{Definition Cauchyfolge}
+    Eine Folge \({(a_n)}_n\) heißt Cauchyfolge (kurz Cauchy), falls
+    \[ \forall \varepsilon > 0 \,\exists K\in\N: 
+    \abs{a_n-a_m} < \varepsilon \, \forall n,m\geq K. \]
+\end{karte}
+\begin{karte}{Eigenschaften Cauchyfolge}
+    Jede konvergente Folge ist eine Cauchyfolge.\\
+    Jede Cauchyfolge ist beschränkt.\\
+    Jede Cauchy-Folge hat eine konv.\ Teilfolge.\\
+    Eine (reelle) Folge \({(a_n)}_n\) konvergiert 
+    \( \Leftrightarrow {(a_n)}_n \) ist Cauchyfolge.
+\end{karte}
+\begin{karte}{Definition Teilfolge/Ausdünnung}
+    Eine Funktion \( \sigma:\N \rightarrow\N \) 
+    heißt Ausdünnung, falls \( \sigma (n+1) 
+    > \sigma(n) \quad \forall n\in\N \) 
+    (d.\ h.\  \(\sigma \) ist streng monoton wachsend).
+\end{karte}
+\begin{karte}{Satz von Bolzano-Weierstraß}
+    Jede beschränkte Folge hat eine konvergente Teilfolge. 
+    (gilt auch in \( \R^d \))
+\end{karte}
+
+\end{document}

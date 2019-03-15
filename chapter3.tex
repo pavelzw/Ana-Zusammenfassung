@@ -1,16 +1,81 @@
 \documentclass[main.tex]{subfiles}
 
 \begin{document}
-
+\section*{Körper}
 \begin{karte}{Körperaxiome}
-    Sei \( (\mathbb{K}, +, \cdot ) \) ein Körper.
+    Sei \( (\K, +, \cdot ) \) ein Körper.
     \begin{description}
-        \item[Kommutativgesetze] \( \forall a,b\in \mathbb{K}: a + b = b + a, a \cdot b = b \cdot a \).
-        \item[Assoziativgesetze] \( \forall a,b,c \in \mathbb{K}: 
+        \item[Kommutativgesetze] \( \forall a,b\in \K: a + b = b + a, a \cdot b = b \cdot a \).
+        \item[Assoziativgesetze] \( \forall a,b,c \in \K: 
         a + (b + c) = (a + b) + c, a \cdot (b \cdot c) = (a \cdot b) \cdot c \).
-        \item[Distributivgesetz] \( \forall a,b,c\in \mathbb{K}: 
+        \item[Distributivgesetz] \( \forall a,b,c\in \K: 
         a \cdot (b + c) = a \cdot b + a \cdot c \).
+        \item[Neutrale Elemente] 
+        \( \exists 0 \in \K: a + 0 = 0 + a = a \,\forall a \in \K \).\\
+        \( \exists 1 \in \K: a \cdot 1 = 1 \cdot a = a \,\forall a \in \K \).
+        \item[Inverse Elemente] 
+        \( \forall a \in \K \exists -a \in \K: a + (-a) = 0. \).\\
+        \( \forall a \in \K \setminus \set{0} \, \exists a^{-1} \in \K: a \cdot a^{-1} = 1. \)
     \end{description}
 \end{karte}
+\begin{karte}{Dreiecksungleichung}
+   Dreiecksungleichung: 
+   \[ \abs{a + b} \leq \abs{a} + \abs{b}. \]
 
+   Umgekehrte Dreiecksungleichung: 
+   \[ \abs{ \abs{a} - \abs{b} } \leq \abs{ a - b }. \]
+\end{karte}
+\begin{karte}{Geometrisch-Arithmetische Ungleichung}
+    \[ ab \leq {\left( \frac{a + b}{2} \right)}^2. \]
+\end{karte}
+\subsection*{Schranken}
+\begin{karte}{Definition Schranke}
+    \( \gamma \) heißt 
+    obere Schranke von \(A\), falls \( \forall a \in A : a \leq \gamma \).\\
+    Schreibe auch \( A \leq \gamma \).\\
+    Analog für untere Schranken.
+    \( A \) heißt beschränkt, wenn \(A\) nach oben und unten beschränkt ist.
+\end{karte}
+\begin{karte}{Definition Supremum, Infimum}
+    Die kleinste obere Schranke heißt Supremum.
+    \[ \alpha = \sup A \Leftrightarrow \alpha \geq A \wedge 
+    \forall \varepsilon > 0 \,\exists a \in A: \alpha - \varepsilon < a. \]
+    Die größte untere Schranke heißt Infimum.
+    \[ \beta = \inf B \Leftrightarrow \beta \geq B \wedge 
+    \forall \varepsilon > 0 \,\exists b \in B: \beta - \varepsilon < b. \]
+\end{karte}
+\subsection*{Das Vollständigkeitsaxiom}
+\begin{karte}{Vollständigkeitsaxiom}
+    Jede nichtleere nach oben beschränkte Teilmenge von \( \K \) erfüllt das\\
+    Vollständigkeitsaxiom, falls gilt:\\
+    Jede nichtleere, nach oben beschränkte Teilmenge von \( \K \) hat ein Supremum.
+\end{karte}
+\subsection*{Die natürlichen Zahlen \( \N \)}
+\begin{karte}{Definition induktive Menge}
+    Eine Teilmenge \( M \subset \R \) heißt \textit{induktiv}, falls gilt:
+    \begin{itemize}
+        \item \( 1 \in M \).
+        \item Aus \( n \in M \) folgt \( n + 1 \in M \).
+    \end{itemize}
+\end{karte}
+\begin{karte}{Definition natürliche Zahlen}
+    \[ \N := \bigcap_{\substack{M\subset \R \\ \text{induktiv}}} M. \]
+\end{karte}
+\begin{karte}{Archimedisches Prinzip}
+    \begin{itemize}
+        \item \( \N \) ist nicht nach oben beschränkt.
+        \item \( \forall x \in \R \) mit \( x > 0 \, \exists n \in \N: \frac{1}{n} < x. \)
+    \end{itemize}
+\end{karte}
+\begin{karte}{Laufindexverschiebung}
+    \[ \sum_{k=m}^n a_k = \sum_{j=m-1}^{n-1} a_{j+1} = \cdots = \sum_{l=0}^{n-m} a_{l+m}. \]
+\end{karte}
+\begin{karte}{Bernoullische Ungleichung}
+    Sei \( x \in \R, x \geq -1, n \in \N_0 \). Dann gilt 
+    \[ {(1+x)}^n \geq 1 + nx. \]
+    Es gilt \gqq{\(>\)}, falls \(n > 1, x \neq 0\).
+\end{karte}
+\begin{karte}{Geometrische Summe}
+    \[ \sum_{k=0}^n x^k = \frac{1 - x^{n+1}}{1 - x}. \]
+\end{karte}
 \end{document}

@@ -1,0 +1,154 @@
+\documentclass[main.tex]{subfiles}
+
+\begin{document}
+
+\section*{Reihen}
+\begin{karte}{Beschränktheit von Reihen}
+    Sind \(a_n \geq 0, n\in\N \), dann gilt\\
+    entweder ist \(S_n = \sum_{k=1}^{n}a_n\) 
+    nach oben beschränkt und dann ist 
+    \[ \sum_{k=1}^{\infty}a_k = \limes{n} 
+    S_n \in [0,\infty) \]
+    oder \(S_n \rightarrow \infty, 
+    n\rightarrow\infty \) und dann 
+    ist \[ \sum_{k=1}^{\infty}a_k 
+    = \limes{n}S_n = +\infty. \]
+    Sind \(a_n \geq 0, n\in \N \), so ist
+	\begin{align*}
+        \text{entweder } 
+        &\sum_{n=1}^{\infty}a_n < \infty 
+        &\text{in diesem Fall ist die 
+        Reihe nach oben beschränkt.}\\
+        \text{oder } &\sum_{n=1}^{\infty}
+        a_n = +\infty &\text{nach oben 
+        unbeschränkt.}
+	\end{align*}
+\end{karte}
+\begin{karte}{Cauchy-Kriterium für Reihen}
+    Seien \(a_n \in\R, n\in\N \). Dann gilt: 
+    \[ \sum_{n=1}^{\infty} a_n 
+    \text{ konvergiert } \Leftrightarrow 
+    \forall \varepsilon > 0 \exists 
+    K \in \N : \abs{\sum_{j=n+1}^{m}a_j} 
+    < \varepsilon \quad \forall m>n\geq K.\]
+\end{karte}
+\begin{karte}{Geometrische Reihe}
+    Sei \(|q|<1\).
+    \[ \Rightarrow \sum_{n=0}^{\infty} q^n 
+    = \frac{1}{1-q}. \]
+\end{karte}
+\begin{karte}{Teleskopierende Summe}
+    \[\sum_{n=2}^{\infty}\frac{1}{n(n-1)}=1 \]
+\end{karte}
+\begin{karte}{Eigenschaft der Folge einer konvergenten Reihe}
+    Wenn die Reihe \(\sum_{n=1}^{\infty} 
+    a_n\) konvergent, so ist \({(a_n)}_n\) 
+    eine Nullfolge.\\
+    Analog für \( \R^d \).
+\end{karte}
+\begin{karte}{Rechenregeln für unendliche Reihen}
+    Sind \( \sum_{n=1}^{\infty}a_n, 
+    \sum_{n=1}^{\infty}b_n \) konvergente 
+    (reelle Reihen), so konvergiert auch 
+    \( \sum_{n=1}^{\infty}(\lambda a_n 
+    + \mu b_n) \quad \forall \lambda, 
+    \mu \in\R \) und 
+    \[ \sum_{n=1}^{\infty} 
+    (\lambda a_n + \mu b_n) = \lambda 
+    \sum_{n=1}^{\infty}a_n + \mu 
+    \sum_{n=1}^{\infty}b_n. \]
+\end{karte}
+\begin{karte}{Cauchyscher Verdichtungssatz}
+    Sei \({(a_n)}_n\) monoton fallende 
+    Nullfolge. Dann gilt
+    \[\sum_{n=1}^{\infty} a_n 
+    \text{ konvergiert }\]
+    \[\Leftrightarrow \text{ die 
+    \gqq{verdichtete} Reihe } 
+    \sum_{n=0}^{\infty}2^n a_{2^n} 
+    = a_1 + 2a_2 + 4a_4 + 8 a_8 
+    + \dots \text{ konvergiert}.\]
+\end{karte}
+\begin{karte}{Reihe \( \frac{1}{n^p} \)}
+    \[ \sum_{n=1}^{\infty} 
+    \frac{1}{n^p} \text{ konv. } 
+    \Leftrightarrow p>1. \]
+    \[ \sum_{n=1}^{\infty} \frac{1}{n^2} 
+    = \frac{\pi^2}{6}. \]
+\end{karte}
+\begin{karte}{Leibnizkriterium}
+    Ist \( {(a_n)}_n \) eine monoton 
+    fallende Nullfolge, so konvergiert 
+    die alternierende Reihe
+    \[ a_1 - a_2 + a_3 - a_4 + \cdots 
+    = \sum_{n=1}^{\infty} {(-1)}^{n+1} a_n. \]
+\end{karte}
+\begin{karte}{Absolute Konvergenz}
+    Eine Reihe \( \sum_{n=1}^{\infty} a_n \) 
+    heißt absolut konvergent, falls 
+    \( \sum_{n=1}^{\infty} \abs{a_n} \) 
+    konvergiert, d.\ h.\ 
+    \(\sum_{n=1}^{\infty} \abs{a_n} < \infty \).\\
+    Analog für \(\R^d\).
+\end{karte}
+\begin{karte}{Dreiecksungleichung für Reihen}
+    Eine absolut konvergente Reihe 
+    \( \sum_{n=1}^{\infty}a_n, a_n \in\R \) 
+    ist konvergent, und
+\[ \abs{ \sum_{n=1}^{\infty}a_n }
+    \leq \sum_{n=1}^{\infty}\abs{a_n}.\]
+    Analog für \( \R^d \).
+\end{karte}
+\begin{karte}{Majorantenkriterium}
+    Wir nennen eine Reihe 
+    \( \sum_{n=0}^{\infty} c_n \) 
+    eine Majorante, von \( \sum_{n=0}^{\infty}
+    a_n, a_n\in\R \), falls \( \abs{a_n} 
+    \leq c_n \) für fast alle \(n\).
+    Hat die Reihe \( \sum_{n=0}^{\infty}a_n \) 
+    eine konvergente Majorante, so konvergiert 
+    \( \sum_{n=0}^{\infty}a_n \) absolut und 
+    ist somit auch konvergent.
+\end{karte}
+\begin{karte}{Minorantenkrium}
+    Wenn \( 0 \leq a_n \leq b_n \) für fast alle \( n \) 
+    gilt, dann gilt:\\
+    Divergiert \( \sum_{n=1}^\infty a_n \), so 
+    divergiert auch \( \sum_{n=1}^\infty b_n \).
+\end{karte}
+\begin{karte}{Quotientenkriterium}
+    Sei \( \sum_{n=0}^{\infty} a_n \) Reihe, 
+    \( a_n\neq 0 \), und es gebe ein \(q\) mit 
+    \( 0<q<1 \), sodass
+    \[ \frac{\abs{a_{n+1}}}{\abs{a_n}} 
+    \leq q \text{ für fast alle }n. \]
+    Dann ist \( \sum_{n=0}^{\infty} a_n \) 
+    absolut konvergent.\\
+    Falls \( q > 1 \) ist, so divergiert die 
+    Reihe.
+\end{karte}
+\begin{karte}{Wurzelkriterium}
+    \( \sum_{n}a_n \) Reihe mit 
+    \[ \limsup\limits_{n\rightarrow\infty} 
+    \abs{a_n}^{\frac{1}{n}} 
+    = \limsup\limits_{n\rightarrow\infty} 
+    \sqrt[n]{\abs{a_n}} < 1 
+    \Rightarrow \sum_n a_n 
+    \text{ konv.\ abs.}.\]
+    Ist \( \limsup\limits_{n\rightarrow\infty} 
+    \abs{a_n}^{\frac{1}{n}} > 1 \), 
+    so ist die Reihe divergent.
+\end{karte}
+\begin{karte}{\gqq{Mutter aller Konvergenzkriterium}}
+    Sei \( \sum_n a_n \) Reihe mit 
+    \(a_n \neq 0 \) für fast alle \(n\). 
+    Dann gilt:
+    \[ \sum_n a_n \text{ konv.\ abs.\ } 
+    \Leftrightarrow \exists c_n > 0, 
+    \sum_n c_n < \infty \text{ und } 
+    \frac{|a_{n+1}|}{|a_n|} \leq 
+    \frac{c_{n+1}}{c_n} 
+    \text{ für fast alle }n. \]
+\end{karte}
+
+\end{document}
