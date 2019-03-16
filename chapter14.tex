@@ -14,7 +14,7 @@
     mit \( \abs{z} < R \) (d.\ h.\  \( z\in B_R(0) \)) 
     und divergiert für jedes \( \abs{z} > R \).
 \end{karte}
-\begin{karte}{Sinus, Cosinusm, eulersche Formel}
+\begin{karte}{Sinus, Cosinus, eulersche Formel}
     \[ \cos z := \sum_{n=0}^\infty {(-1)}^n \frac{z^{2n}}{2n!} 
     \qquad \sin z  := \sum_{n=0}^\infty {(-1)}^n 
     \frac{z^{2n+1}}{(2n+1)!}. \]
@@ -42,19 +42,18 @@
     und \( \sum_{n=1}^\infty n \cdot a_n z^{n-1} \) 
     haben denselben Konvergenzradius.
 \end{karte}
-\begin{karte}{Konvergenzradiuslemma}%besserer Name?
+\begin{karte}{Maximum einer Konvergenzreihe}
     Konvergiert \( \sum_{n=0}^\infty a_n z^n \) 
     für ein \( z = z_1 \neq 0 \), so ist sie auf 
-    der Kreisscheibe \( \overline{B_r (0)}  
+    der Kreisscheibe \( B_r (0)  
     = \set{ z\in\C \;\vert \; \abs{z}\leq r } \)
     beschränkt für jedes \( 0 < r < \abs{z_1} \).\\
     D.\ h.\  \( \exists \, M(r) \geq 0 \), sodass
     \[ \abs{ \sum_{n=0}^\infty a_n z^n } \leq M(r) 
     \quad \forall \, \abs{z} < r. \]
-\end{karte}
-\begin{karte}{Konvergenzradiuskorollar}%besserer Name?
     Ang.\  \( \sum_{n=0}^\infty a_n z^n \) konvergiert 
-    für ein \( z = z_1 \neq 0 \). Dann gibt es zu jedem
+    für ein \( z = z_1 \neq 0 \). \\
+    Dann gibt es zu jedem
     \[ 0 < r < \abs{z_1} \text{ und } k\in\N_0\]
     ein \( M(r,k) > 0 \) mit
     \[ \abs{ \sum_{n=1}^\infty a_n z^n } 
@@ -63,7 +62,7 @@
 \begin{karte}{Nullreihensatz}
     Es gebe eine Folge \( {(z_k)}_j, z_j \in\C, z_j 
     \neq 0 \) mit \( z_j \rightarrow 0 \), sodass 
-    \( \sum_{n=0}^\infty a_n z_j^n = 0 \quad \,\forall \, j\in\N \).
+    \[ \sum_{n=0}^\infty a_n z_j^n = 0 \quad \,\forall \, j\in\N. \]
     \[ \Rightarrow a_n = 0 \quad \forall n\in\N_0. \]
 \end{karte}
 \end{document}

@@ -2,7 +2,7 @@
 
 \begin{document}
 \section*{Satz von Rolle, MWS, Extrema}
-\begin{karte}{Definition Lokale Extrema}
+\begin{karte}{Definition lokale Extrema}
     Die Funktion \( f : [a,b] \rightarrow \R \) (oder \( (a,b) \))
     hat in \( x_0 \in [a,b] \) ein lokales Minimum (oder in 
     \( x_0 \in (a,b) \)), falls \( \exists \, \delta > 0 \), 
@@ -20,7 +20,7 @@
     Minimum hat.\\
     Lokale Extrema \(=\) lokale Minima oder Maxima.
 \end{karte}
-\begin{karte}{notwendige Bedingung für Extrema}
+\begin{karte}{Notwendige Bedingung für Extrema}
     \( f: (a,b) \rightarrow \R \) habe in \(x_0 \in (a,b) \) 
     ein lokales Extremum. Ist \(f\) in \(x_0\) differenzierbar, 
     so gilt \( f'(x_0) = 0 \)
@@ -64,6 +64,9 @@
 \begin{karte}{Definition Lipschitzstetigkeit}
     Sei \( f: [a,b] \rightarrow \R^d \) stetig und 
     differenzierbar auf \( (a,b) \). \\
+    \( f \) ist Lipschitz-stetig, wenn ein \(L\) 
+    existiert, sodass 
+    \[ \abs{ f(x_1) - f(x_2) } \leq L \abs{x_1 - x_2}. \]
     Gilt \( ||f'(x)|| \leq L \, \forall \, x \in (a,b) \), 
     so folgt 
     \[ ||f(x) - f(y)|| \leq L ||x-y|| 
