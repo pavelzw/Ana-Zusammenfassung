@@ -10,6 +10,13 @@
     := {\left(\sum_{j=1}^{d} x_j^2 \right)}^{1/2} 
     = \langle x,x\rangle^{1/2} 
     = \sqrt{\langle x,x\rangle}. \]
+    Rechenregeln:
+    \[ \langle x,y \rangle = \langle y,x \rangle. \]
+    \[ \langle x, \lambda y + \mu z \rangle 
+    = \lambda \langle x,y \rangle + \mu \langle x,z \rangle. \]
+    \[ \langle x,x \rangle \geq 0 \text{ und } 
+    \langle x,x \rangle = 0 
+    \Leftrightarrow x = 0. \]
 \end{karte}
 \begin{karte}{Cauchy-Schwarz-Ungleichung}
     \[ \forall x,y\in\R^d: 
@@ -91,7 +98,7 @@
     ist beschränkt, falls es ein 
     \( \delta > 0\) so, dass \( A\subset B_\delta(0) 
     \Leftrightarrow \exists 0<\delta<\infty:
-    \forall x\in A: \abs{x}\leq \delta \).\\
+    \forall x\in A: \abs{x} < \delta \).\\
     Eine Folge \( {(x_n)}_n, x_n\in\R^d \) 
     ist beschränkt, falls \(A := \set{x_n \;\vert \; n\in\N} \) 
     eine beschränkte Menge in \( \R^d \) ist 
