@@ -14,14 +14,21 @@
     mit \( \abs{z} < R \) (d.\ h.\  \( z\in B_R(0) \)) 
     und divergiert für jedes \( \abs{z} > R \).
 \end{karte}
-\begin{karte}{Sinus, Cosinus, eulersche Formel}
-    \[ \cos z := \sum_{n=0}^\infty {(-1)}^n \frac{z^{2n}}{2n!} 
+\begin{karte}{\( \sin \), \( \cos \), eulersche Formel, \( \sinh, \cosh \)}
+    \[ \cos z := \sum_{n=0}^\infty {(-1)}^n \frac{z^{2n}}{2n!}
     \qquad \sin z  := \sum_{n=0}^\infty {(-1)}^n 
     \frac{z^{2n+1}}{(2n+1)!}. \]
+    \[ \cos x = \frac{e^{ix} + e^{-ix}}{2} \qquad 
+    \sin x = \frac{e^{ix} - e^{-ix}}{2i} \]
     Es gilt:
     \[ e^{iz} = \cos z + i \sin z \quad \forall z\in\C. \]
     Es gilt:
     \[ \cos^2 t + \sin^2 t = 1 \quad \forall t \in \R. \]
+    \[ \cosh x = \sum_{n=0}^\infty \frac{z^{2n}}{(2n)!} \qquad 
+    \sinh x = \sum_{n=0}^\infty \frac{z^{2n + 1}}{(2n + 1)!}. \]
+    \[ \cos x = \frac{e^{x} + e^{-x}}{2} \qquad 
+    \sin x = \frac{e^{x} - e^{-x}}{2}. \]
+    \[ \cosh^2 t - \sinh^2 t = 1 \quad \forall t \in \R. \]
 \end{karte}
 \begin{karte}{Konvergenzradius Wurzelkriterium}
     Für den Konvergenzradius \( R \) von 
@@ -42,7 +49,7 @@
     und \( \sum_{n=1}^\infty n \cdot a_n z^{n-1} \) 
     haben denselben Konvergenzradius.
 \end{karte}
-\begin{karte}{Maximum einer Konvergenzreihe}
+\begin{karte}{Maximum einer Potenzreihe}
     Konvergiert \( \sum_{n=0}^\infty a_n z^n \) 
     für ein \( z = z_1 \neq 0 \), so ist sie auf 
     der Kreisscheibe \( B_r (0)  
