@@ -14,7 +14,7 @@
         \( \exists 0 \in \K: a + 0 = 0 + a = a \,\forall a \in \K \).\\
         \( \exists 1 \in \K: a \cdot 1 = 1 \cdot a = a \,\forall a \in \K \).
         \item[Inverse Elemente] 
-        \( \forall a \in \K \exists -a \in \K: a + (-a) = 0. \).\\
+        \( \forall a \in \K \;\exists -a \in \K: a + (-a) = 0. \).\\
         \( \forall a \in \K \setminus \set{0} \, \exists a^{-1} \in \K: a \cdot a^{-1} = 1. \)
     \end{description}
 \end{karte}
@@ -41,13 +41,12 @@
     \[ \alpha = \sup A \Leftrightarrow \alpha \geq A \wedge 
     \forall \varepsilon > 0 \,\exists a \in A: \alpha - \varepsilon < a. \]
     Die größte untere Schranke heißt Infimum.
-    \[ \beta = \inf B \Leftrightarrow \beta \geq B \wedge 
-    \forall \varepsilon > 0 \,\exists b \in B: \beta - \varepsilon < b. \]
+    \[ \beta = \inf B \Leftrightarrow \beta \leq B \wedge 
+    \forall \varepsilon > 0 \,\exists b \in B: \beta + \varepsilon > b. \]
 \end{karte}
 \subsection*{Das Vollständigkeitsaxiom}
 \begin{karte}{Vollständigkeitsaxiom}
-    Jede nichtleere nach oben beschränkte Teilmenge von \( \K \) erfüllt das\\
-    Vollständigkeitsaxiom, falls gilt:\\
+    Ein angeordneter Körper \( \K \) erfüllt das Vollständigkeitsaxiom, falls gilt:\\
     Jede nichtleere, nach oben beschränkte Teilmenge von \( \K \) hat ein Supremum.
 \end{karte}
 \subsection*{Die natürlichen Zahlen \( \N \)}
@@ -69,6 +68,8 @@
 \end{karte}
 \begin{karte}{Laufindexverschiebung}
     \[ \sum_{k=m}^n a_k = \sum_{j=m-1}^{n-1} a_{j+1} = \cdots = \sum_{l=0}^{n-m} a_{l+m}. \]
+    Beispiel:
+    \[ \sum_{i=1}^n 2^i = \sum_{i=0}^{n-1} 2^{i+1} = 2\sum_{i=0}^{n-1} 2^i. \]
 \end{karte}
 \begin{karte}{Bernoullische Ungleichung}
     Sei \( x \in \R, x \geq -1, n \in \N_0 \). Dann gilt 

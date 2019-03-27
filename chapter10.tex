@@ -24,16 +24,14 @@
 	\end{enumerate}
 \end{karte}
 \begin{karte}{Definition \( \limsup, \liminf \)}
-    \[ \limsup {(a_n)}_n = \sup H({(a_n)}_n). \]
-    \[ \liminf {(a_n)}_n = \inf H({(a_n)}_n). \]
+    \[ \limsup {(a_n)}_n = \sup H({(a_n)}_n) = \limes{n} \sup_{k\geq n} a_k. \]
+    \[ \liminf {(a_n)}_n = \inf H({(a_n)}_n) = \limes{n} \inf_{k\geq n} a_k. \]
     Es gilt immer \( \liminf\limits_{n\rightarrow\infty}
     a_n \leq \limsup\limits_{n\rightarrow\infty}a_n \). \\
     \({(a_n)}_n\) beschränkte Folge:\\
     dann gilt \({(a_n)}_n\) konvergiert \( \Leftrightarrow 
     \liminf\limits_{n\rightarrow\infty}
-    a_n = \limsup\limits_{n\rightarrow\infty}a_n 
-    \Leftrightarrow \liminf\limits_{n\rightarrow\infty}a_n 
-    \geq \limsup\limits_{n\rightarrow\infty}a_n \).
+    a_n = \limsup\limits_{n\rightarrow\infty}a_n\).
 \end{karte}
 \begin{karte}{Eigenschaften \(\liminf, \limsup \)}
     Sei \({(a_n)}_n\) beschränkte Folge. Dann gilt:\\
@@ -42,13 +40,13 @@
         \item \(\forall a> a^* \) ist \( \set{n\in\N \;\vert \; a_n>a} \) 
         endliche Teilmenge von \(\N \).
         \item \( \forall a<a^* \) gibt es \(\infty \)-viele \(a_n >a\). 
-        (d.\ h.\  \( \set{ n\in\N|a_n>a} \) ist unendliche 
+        (d.\ h.\  \( \set{ n\in\N \;\vert \; a_n>a} \) ist unendliche 
         Teilmenge von \(\N \)).
 	\end{enumerate}
 	genauso für \( \liminf \):
 	\(a_* = \liminf\limits_{n\rightarrow\infty}a_n \Leftrightarrow \)
 	\begin{enumerate}
-        \item \(\forall a< a_* \) ist \( \set{n\in\N |a_n<a} \) 
+        \item \(\forall a< a_* \) ist \( \set{n\in\N \;\vert \; a_n<a} \) 
         endliche Teilmenge von \(\N \).
 		\item \( \forall a>a_* \) gibt es \(\infty \)-viele \(a_n<a\).
     \end{enumerate}
@@ -64,8 +62,7 @@
 \begin{karte}{Häufungswerte finden}
     Man suche sich alle Teilfolgen \( a_{n_k^{(l)}} \) aus mit 
     \[ \bigcup_{i=1}^l \set{ n_k^{(i)} \;\vert\; k\in \N } = \N \]
-    und Grenzwerten \( \alpha_i = \limes{k} a_{n_k^{(i)}} \), 
-    wobei die \( \alpha_i \).
+    und Grenzwerten \( \alpha_i = \limes{k} a_{n_k^{(i)}} \).
     Dann gilt
     \[ H({(a_n)}_n) = \set{ \alpha_1, \ldots, \alpha_l }. \]
 \end{karte}
